@@ -12,7 +12,7 @@ export const Popup: React.FC<IProps> = ({ name, title, img }) => {
   return (
     <div>
       <button
-        className="btn btn-primary text-white"
+        className="btn hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800"
         onClick={() => {
           if (document) {
             (document.getElementById(name) as HTMLFormElement).showModal();

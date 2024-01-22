@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { FacebookMessenger } from "../../components/messanger";
+import { FacebookMessenger } from "./components/messanger";
 
 const inter = Inter({ subsets: ["latin"] });
 

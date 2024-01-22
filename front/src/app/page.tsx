@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Popup } from "../../components/popup";
+import { Popup } from "./components/popup";
 
 export default function Home() {
   const dataCard = [
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="pl-4 py-3 h-fit w-24 hidden lg:block">
             <img src="assets/images/dan-but/logo.png" alt="logo" />
           </div>
-          <div className="flex flex-col  bg-purple-200 py-4 w-full font-semibold text-purple-950">
+          <div className="flex flex-col bg-purple-200 py-4 w-full font-semibold text-purple-950">
             Дорнод Оргинал Гоо Сайхны Бүтээгдэхүүн
             <p>Dornod Original Skin Care Products</p>
           </div>
@@ -77,7 +77,7 @@ export default function Home() {
         <div className="flex flex-col w-fit lg:flex-row gap-5">
           <div className="">
             <Link href="/suggestions">
-              <button className="btn  hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300">
+              <button className="btn hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
                 Арьсны асуудлаар сонгох
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ export default function Home() {
                   stroke="currentColor"
                 >
                   <path
-                    className=" stroke-pink-800"
+                    className="stroke-pink-800"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -100,7 +100,7 @@ export default function Home() {
           <div className="divider lg:divider-horizontal">эсвэл</div>
           <div className="">
             <Link href="/suggest_products">
-              <button className="btn  hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300">
+              <button className="btn hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
                 Бүтээгдэхүүний төрлөөр сонгох
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

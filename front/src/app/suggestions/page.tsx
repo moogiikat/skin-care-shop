@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { dataProducts } from "../../data/data";
-import { Popup } from "../../../components/popup";
+import { Popup } from "../components/popup";
 export default function Suggestions() {
   const dataCategory = [
     { title: "Батагшилт", urlName: "#problems1" },
@@ -30,7 +30,7 @@ export default function Suggestions() {
             return (
               <div className="" key={idx}>
                 <Link href={item.urlName}>
-                  <button className="btn w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300">
+                  <button className="btn w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
                     {item.title}
                   </button>
                 </Link>

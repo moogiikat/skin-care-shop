@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { dataProducts } from "../../data/data";
-import { Popup } from "../../../components/popup";
+import { Popup } from "../components/popup";
 export default function Home() {
   const dataCategory = [
     { title: "Сет бүтээгдэхүүн", urlName: "#sets" },
@@ -14,11 +14,11 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col items-center gap-5 text-center pb-5">
-        <div className="flex  flex-row z-20 lg:text-xl sticky top-0 bg-purple-200 py-2 px-4 w-full font-semibold text-purple-950">
+        <div className="flex flex-row z-20 lg:text-xl sticky top-0 bg-purple-200 py-2 px-4 w-full font-semibold text-purple-950">
           <div className="pl-4 py-3 h-fit w-24 hidden lg:block">
             <img src="assets/images/dan-but/logo.png" alt="logo" />
           </div>
-          <div className="flex flex-col  bg-purple-200 py-4 w-full font-semibold text-purple-950">
+          <div className="flex flex-col bg-purple-200 py-4 w-full font-semibold text-purple-950">
             Дорнод Оргинал Гоо Сайхны Бүтээгдэхүүн
             <p>Dornod Original Skin Care Products</p>
           </div>
@@ -31,7 +31,7 @@ export default function Home() {
             return (
               <div className="" key={idx}>
                 <Link href={item.urlName}>
-                  <button className="btn w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300">
+                  <button className="btn w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
                     {item.title}
                   </button>
                 </Link>
@@ -213,7 +213,7 @@ export default function Home() {
             })}
         </div>
       </div>
-      <footer className="footer items-center p-4 bg-neutral text-neutral-content">
+      <footer className="footer items-center p-4 bg-neutral text-neutral-content bg-purple-200">
         <aside className="items-center grid-flow-col">
           <img
             src="assets/images/dan-but/logo.png"
