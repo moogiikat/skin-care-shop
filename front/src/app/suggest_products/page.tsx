@@ -6,7 +6,7 @@ export default function Home() {
     {
       title: "Ногоон цайны хандтай сальфеткан маск",
       img: "assets/images/masks/tea_mask.png",
-      category: ["mask", "kangaroo_mommy"],
+      category: ["mask", "batga", "kangaroo_mommy"],
       urlName: "/tea_tree_mask",
     },
     {
@@ -43,7 +43,7 @@ export default function Home() {
     {
       title: "Ногоон цайны хандтай сет",
       img: "assets/images/set/tea_tree_set.png",
-      category: ["set", "kangaroo_mommy"],
+      category: ["set", "batga", "kangaroo_mommy"],
       urlName: "/tea_tree_set",
     },
     {
@@ -130,6 +130,12 @@ export default function Home() {
       img: "assets/images/dan-but/wheat_cleanser.png",
       category: ["other", "kangaroo_mommy"],
       urlName: "/wheat_cleanser",
+    },
+    {
+      title: "Улаан буудайн охьтой нүүрний тос",
+      img: "assets/images/dan-but/wheat_cream.png",
+      category: ["other", "kangaroo_mommy"],
+      urlName: "/wheat_cream",
     },
     {
       title: "Улаан буудайн охьтой үсний сет",

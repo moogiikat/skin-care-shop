@@ -13,31 +13,31 @@ export default function Home() {
       title: "Гарын тос",
       img: "assets/images/body-skin-care/cubilose_body_lotion.png",
       category: ["bodySkinCare", "kangaroo_mommy"],
-      id: 1,
+      id: 2,
     },
     {
       title: "Гарын тос",
       img: "assets/images/body-skin-care/cubilose_body_lotion.png",
       category: ["bodySkinCare", "kangaroo_mommy"],
-      id: 1,
+      id: 3,
     },
     {
       title: "Гарын тос",
       img: "assets/images/body-skin-care/cubilose_body_lotion.png",
       category: ["bodySkinCare", "kangaroo_mommy"],
-      id: 1,
+      id: 4,
     },
     {
       title: "Гарын тос",
       img: "assets/images/body-skin-care/cubilose_body_lotion.png",
       category: ["bodySkinCare", "kangaroo_mommy"],
-      id: 1,
+      id: 5,
     },
     {
       title: "Гарын тос",
       img: "assets/images/body-skin-care/cubilose_body_lotion.png",
       category: ["bodySkinCare", "kangaroo_mommy"],
-      id: 1,
+      id: 6,
     },
     {
       title: "Гарын тос",
@@ -63,7 +63,7 @@ export default function Home() {
       <p>Дорнод оргинал гоо сайхны бүтээгдэхүүн</p>
 
       <p>bodySkinCare</p>
-      {data
+     { data
         .filter((data) => data.category.includes("bodySkinCare"))
         .map((item) => {
           return (
@@ -80,7 +80,7 @@ export default function Home() {
           return (
             <div>
               <div>{item.title}</div>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="" className="flex"/>
             </div>
           );
         })}
