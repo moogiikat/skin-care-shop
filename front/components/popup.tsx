@@ -10,7 +10,7 @@ interface IProps {
 
 export const Popup: React.FC<IProps> = ({ name, title, img }) => {
   return (
-    <div className="card-actions">
+    <div>
       <button
         className="btn btn-primary text-white"
         onClick={() => {

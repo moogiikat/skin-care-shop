@@ -55,7 +55,13 @@ export default function Home() {
                   </figure>
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
-                    <Popup name={item.name} title={item.title} img={item.img} />
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                      />
+                    </div>
                   </div>
                 </div>
               );
@@ -78,7 +84,13 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <Popup name={item.name} title={item.title} img={item.img} />
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                      />
+                    </div>
                   </div>
                 </div>
               );
@@ -101,7 +113,13 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <Popup name={item.name} title={item.title} img={item.img} />
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                      />
+                    </div>
                   </div>
                 </div>
               );
@@ -124,7 +142,13 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <Popup name={item.name} title={item.title} img={item.img} />
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                      />
+                    </div>
                   </div>
                 </div>
               );
@@ -147,7 +171,13 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <Popup name={item.name} title={item.title} img={item.img} />
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                      />
+                    </div>
                   </div>
                 </div>
               );
@@ -170,7 +200,13 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <Popup name={item.name} title={item.title} img={item.img} />
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                      />
+                    </div>
                   </div>
                 </div>
               );
