@@ -115,9 +115,9 @@ export default function Home() {
 
         <p className="font-bold text-xl">Онцлох бүтээгдэхүүн</p>
         <div className="carousel carousel-center max-w-full gap-4 pt-4">
-          {dataCard.map((item) => {
+          {dataCard.map((item, idx) => {
             return (
-              <div className="indicator">
+              <div key={idx} className="indicator">
                 {item.isNew && (
                   <span className="indicator-item indicator-center badge badge-primary h-8 text-white">
                     Шинэ бүтээгдэхүүн
@@ -147,9 +147,9 @@ export default function Home() {
 
         <p className="font-bold text-xl pt-5">Хямдралтай бүтээгдэхүүн</p>
         <div className="carousel carousel-center max-w-full gap-4 ">
-          {dataSaleCard.map((item) => {
+          {dataSaleCard.map((item, idx) => {
             return (
-              <div className="card carousel-item w-60 bg-base-100 ">
+              <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                 <figure className="px-4 pt-4">
                   <img src={item.img} alt="Sale" className="rounded-xl" />
                 </figure>
@@ -180,10 +180,6 @@ export default function Home() {
             src="assets/images/dan-but/logo.png"
             width="36"
             height="36"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
             className="fill-current"
           />
 

@@ -63,11 +63,11 @@ export default function Home() {
       <p>Дорнод оргинал гоо сайхны бүтээгдэхүүн</p>
 
       <p>bodySkinCare</p>
-     { data
+      {data
         .filter((data) => data.category.includes("bodySkinCare"))
-        .map((item) => {
+        .map((item, idx) => {
           return (
-            <div>
+            <div key={idx}>
               <div>{item.title}</div>
               <img src={item.img} alt="" />
             </div>
@@ -76,11 +76,11 @@ export default function Home() {
       <p>kangaroo_mommy</p>
       {data
         .filter((data) => data.category.includes("kangaroo_mommy"))
-        .map((item) => {
+        .map((item, idx) => {
           return (
-            <div>
+            <div key={idx}>
               <div>{item.title}</div>
-              <img src={item.img} alt="" className="flex"/>
+              <img src={item.img} alt="" className="flex" />
             </div>
           );
         })}

@@ -1,156 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { dataProducts } from "../../data/data";
 export default function Home() {
-  const dataProducts = [
-    {
-      title: "Ногоон цайны хандтай сальфеткан маск",
-      img: "assets/images/masks/tea_mask.png",
-      category: ["mask", "batga", "kangaroo_mommy"],
-      urlName: "/tea_tree_mask",
-    },
-    {
-      title: "Ямааны сүүний хандтай шөнийн маск",
-      img: "assets/images/masks/goat_night.png",
-      category: ["mask", "kangaroo_mommy"],
-      urlName: "/goat_night_mask",
-    },
-    {
-      title: "Улаан буудайн охьтой сальфеткан маск",
-      img: "assets/images/masks/wheat_mask.png",
-      category: ["mask", "kangaroo_mommy"],
-      urlName: "/wheat_mask",
-    },
-    {
-      title: "Ямааны сүүний хандтай сальфеткан маск",
-      img: "assets/images/masks/goat_mask.png",
-      category: ["mask", "kangaroo_mommy"],
-      urlName: "/goat_mask",
-    },
-    {
-      title: "Шувууны үүрийн охьтой сальфеткан маск",
-      img: "assets/images/masks/cubilose_mask.png",
-      category: ["mask", "kangaroo_mommy"],
-      urlName: "/cubilose_mask",
-    },
-    {
-      title: "Улаан буудайн үрийн охьтой шөнийн маск",
-      img: "assets/images/masks/wheat_night_mask.png",
-      category: ["mask", "kangaroo_mommy"],
-      urlName: "/wheat_night_mask",
-    },
-
-    {
-      title: "Ногоон цайны хандтай сет",
-      img: "assets/images/set/tea_tree_set.png",
-      category: ["set", "batga", "kangaroo_mommy"],
-      urlName: "/tea_tree_set",
-    },
-    {
-      title: "Фолийн хүчил агуулсан дээд зэрэглэлийн сет",
-      img: "assets/images/set/folic_set.png",
-      category: ["set", "kangaroo_mommy"],
-      urlName: "/folic_acid_set",
-    },
-    {
-      title: "Улаан буудайн үрийн охьтой сет",
-      img: "assets/images/set/wheat_set.png",
-      category: ["set", "kangaroo_mommy"],
-      urlName: "/wheat_set",
-    },
-    {
-      title: "Буурцагны үрийн охьтой сет",
-      img: "assets/images/set/soybean_set.png",
-      category: ["set", "kangaroo_mommy"],
-      urlName: "/soybean_set",
-    },
-    {
-      title: "Шувууны үүрийн охьтой сет",
-      img: "assets/images/set/cubilose_set.png",
-      category: ["set", "kangaroo_mommy"],
-      urlName: "/cubilose_set",
-    },
-
-    {
-      title: "Авокадо жимсний охьтой биеийн тос",
-      img: "assets/images/body-skin-care/avocado_lotion.png",
-      category: ["body_skincare", "kangaroo_mommy"],
-      urlName: "/avocado_lotion",
-    },
-    {
-      title: "Шувууны үүрийн охьтой гарын тос",
-      img: "assets/images/body-skin-care/cubilose_hand_cream.png",
-      category: ["body_skincare", "kangaroo_mommy"],
-      urlName: "/cubilose_hand_cream",
-    },
-    {
-      title: "Улаан буудайн охьтой биеийн тос",
-      img: "assets/images/body-skin-care/wheat_body_lotion.png",
-      category: ["body_skincare", "kangaroo_mommy"],
-      urlName: "/wheat_body_lotion",
-    },
-    {
-      title: "Шувууны үүрийн охьтой биеийн тос",
-      img: "assets/images/body-skin-care/cubilose_body_lotion.png",
-      category: ["body_skincare", "kangaroo_mommy"],
-      urlName: "/cubilose_body_lotion",
-    },
-    {
-      title: "Улаан буудайн охьтой гарын тос",
-      img: "assets/images/body-skin-care/wheat_hand_cream.png",
-      category: ["body_skincare", "kangaroo_mommy"],
-      urlName: "/wheat_hand_cream",
-    },
-    {
-      title: "Улаан буудайн охьтой уруулын бальзам",
-      img: "assets/images/dan-but/lip_balm.png",
-      category: ["other", "kangaroo_mommy"],
-      urlName: "/wheat_lip_balm",
-    },
-    {
-      title: "Нарны тос",
-      img: "assets/images/dan-but/narnii_tos_jijig.png",
-      category: ["other", "kangaroo_mommy"],
-      urlName: "/sunscreen_sm",
-    },
-    {
-      title: "Нарны тос (Хөгшрөлтийн эсрэг)",
-      img: "assets/images/dan-but/narnii_tos_jijig.png",
-      category: ["other", "kangaroo_mommy"],
-      urlName: "/sunscreen_bold",
-    },
-    {
-      title: "Улаан буудайн охьтой нүүр угаагч",
-      img: "assets/images/dan-but/wheat_cleanser_new.png",
-      category: ["other", "kangaroo_mommy"],
-      urlName: "/wheat_cleanser_new",
-    },
-    {
-      title: "Улаан буудайн охьтой нүүр цэвэрлэгч",
-      img: "assets/images/dan-but/wheat_cleanser.png",
-      category: ["other", "kangaroo_mommy"],
-      urlName: "/wheat_cleanser",
-    },
-    {
-      title: "Улаан буудайн охьтой нүүрний тос",
-      img: "assets/images/dan-but/wheat_cream.png",
-      category: ["other", "kangaroo_mommy"],
-      urlName: "/wheat_cream",
-    },
-    {
-      title: "Улаан буудайн охьтой үсний сет",
-      img: "assets/images/hair/wheat_sham_condi.png",
-      category: ["hair", "kangaroo_mommy"],
-      urlName: "/wheat_hair_set",
-    },
-  ];
   const dataCategory = [
-    { title: "Сет бүтээгдэхүүн", urlName: "" },
-    { title: "Бүх төрлийн маск", urlName: "" },
-    { title: "Биеийн арьс арчилгаа", urlName: "" },
-    { title: "Хүүхдийн бүтээгдэхүүн", urlName: "" },
-    { title: "Үс арчилгааны бүтээгдэхүүн", urlName: "" },
-    { title: "Бусад бүтээгдэхүүнүүд", urlName: "" },
+    { title: "Сет бүтээгдэхүүн", urlName: "#sets" },
+    { title: "Бүх төрлийн маск", urlName: "#masks" },
+    { title: "Биеийн арьс арчилгаа", urlName: "#bodySkinCare" },
+    { title: "Хүүхдийн бүтээгдэхүүн", urlName: "#baby" },
+    { title: "Үс арчилгааны бүтээгдэхүүн", urlName: "#hair" },
+    { title: "Бусад бүтээгдэхүүнүүд", urlName: "#other" },
   ];
   return (
     <div>
@@ -165,9 +23,9 @@ export default function Home() {
           </div>
         </div>
         <div className="gap-4 grid grid-cols-2 lg:grid-cols-3">
-          {dataCategory.map((item) => {
+          {dataCategory.map((item, idx) => {
             return (
-              <div className="">
+              <div className="" key={idx}>
                 <Link href={item.urlName}>
                   <button className="btn w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300">
                     {item.title}
@@ -178,14 +36,16 @@ export default function Home() {
           })}
         </div>
 
-        <p className="font-bold text-xl">Сет бүтээгдэхүүн</p>
+        <p id="sets" className="font-bold text-xl">
+          Сет бүтээгдэхүүн
+        </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
             .filter((data) => data.category.includes("set"))
-            .map((item) => {
+            .map((item, idx) => {
               return (
-                <div className="card carousel-item w-60 bg-base-100 ">
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                   <figure className="px-4 pt-4">
                     <img src={item.img} alt="set" className="rounded-xl" />
                   </figure>
@@ -205,14 +65,16 @@ export default function Home() {
             })}
         </div>
 
-        <p className="font-bold text-xl">Бүх төрлийн маск</p>
+        <p id="masks" className="font-bold text-xl">
+          Бүх төрлийн маск
+        </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
             .filter((data) => data.category.includes("mask"))
-            .map((item) => {
+            .map((item, idx) => {
               return (
-                <div className="card carousel-item w-60 bg-base-100 ">
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                   <figure className="px-4 pt-4">
                     <img src={item.img} alt="masks" className="rounded-xl" />
                   </figure>
@@ -232,14 +94,16 @@ export default function Home() {
             })}
         </div>
 
-        <p className="font-bold text-xl">Биеийн арьс арчилгаа</p>
+        <p id="bodySkinCare" className="font-bold text-xl">
+          Биеийн арьс арчилгаа
+        </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
             .filter((data) => data.category.includes("body_skincare"))
-            .map((item) => {
+            .map((item, idx) => {
               return (
-                <div className="card carousel-item w-60 bg-base-100 ">
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                   <figure className="px-4 pt-4">
                     <img src={item.img} alt="masks" className="rounded-xl" />
                   </figure>
@@ -259,14 +123,16 @@ export default function Home() {
             })}
         </div>
 
-        <p className="font-bold text-xl">Хүүхдийн бүтээгдэхүүн</p>
+        <p id="baby" className="font-bold text-xl">
+          Хүүхдийн бүтээгдэхүүн
+        </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
             .filter((data) => data.category.includes("baby"))
-            .map((item) => {
+            .map((item, idx) => {
               return (
-                <div className="card carousel-item w-60 bg-base-100 ">
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                   <figure className="px-4 pt-4">
                     <img src={item.img} alt="set" className="rounded-xl" />
                   </figure>
@@ -286,14 +152,16 @@ export default function Home() {
             })}
         </div>
 
-        <p className="font-bold text-xl">Үс арчилгааны бүтээгдэхүүн</p>
+        <p id="hair" className="font-bold text-xl">
+          Үс арчилгааны бүтээгдэхүүн
+        </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
             .filter((data) => data.category.includes("hair"))
-            .map((item) => {
+            .map((item, idx) => {
               return (
-                <div className="card carousel-item w-60 bg-base-100 ">
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                   <figure className="px-4 pt-4">
                     <img src={item.img} alt="set" className="rounded-xl" />
                   </figure>
@@ -313,14 +181,16 @@ export default function Home() {
             })}
         </div>
 
-        <p className="font-bold text-xl">Бусад бүтээгдэхүүнүүд</p>
+        <p id="other" className="font-bold text-xl">
+          Бусад бүтээгдэхүүнүүд
+        </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
             .filter((data) => data.category.includes("other"))
-            .map((item) => {
+            .map((item, idx) => {
               return (
-                <div className="card carousel-item w-60 bg-base-100 ">
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                   <figure className="px-4 pt-4">
                     <img src={item.img} alt="set" className="rounded-xl" />
                   </figure>
@@ -346,10 +216,6 @@ export default function Home() {
             src="assets/images/dan-but/logo.png"
             width="36"
             height="36"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
             className="fill-current"
           />
 
