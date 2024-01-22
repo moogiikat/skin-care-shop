@@ -1,24 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Popup } from "../../components/popup";
 
 export default function Home() {
   const dataCard = [
     {
+      name: "data1",
       title: "Шувууны үүрний охьтой гарын тос",
       img: "assets/images/body-skin-care/cubilose_hand_cream.png",
       isNew: false,
     },
     {
+      name: "data2",
       title: "Ямааны сүүний охьтой шөнийн маск",
       img: "assets/images/masks/goat_night.png",
       isNew: false,
     },
     {
+      name: "data3",
       title: "Улаан буудайн охьтой нүүр угаагч",
       img: "assets/images/dan-but/wheat_cleanser_new.png",
       isNew: true,
     },
     {
+      name: "data4",
       title: "Модны цайны хандтай маск",
       img: "assets/images/masks/tea_mask.png",
       isNew: false,
@@ -27,24 +32,28 @@ export default function Home() {
 
   const dataSaleCard = [
     {
+      name: "item1",
       title: "Улаан буудайн охьтой уруулын бальзам",
       img: "assets/images/dan-but/lip_balm.png",
       priceOld: "10'000",
       priceNew: "8'000",
     },
     {
+      name: "item2",
       title: "Буурцагны үрийн охьтой сэт",
       img: "assets/images/set/soybean_set.png",
       priceOld: "250'000",
       priceNew: "220'000",
     },
     {
+      name: "item3",
       title: "Авокадо жимсний охьтой биеийн тос",
       img: "assets/images/body-skin-care/avocado_lotion.png",
       priceOld: "32'000",
       priceNew: "28'000",
     },
     {
+      name: "item4",
       title: "Улаан буудайн охьтой нүүр цэвэрлэгч",
       img: "assets/images/dan-but/wheat_cleanser.png",
       priceOld: "50'000",
@@ -133,11 +142,7 @@ export default function Home() {
                   </figure>
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
-                    <div className="card-actions">
-                      <button className="btn btn-primary text-white">
-                        Дэлгэрэнгүй
-                      </button>
-                    </div>
+                    <Popup name={item.name} title={item.title} img={item.img} />
                   </div>
                 </div>
               </div>
@@ -163,11 +168,7 @@ export default function Home() {
                       {item.priceNew}₮
                     </div>
                   </div>
-                  <div className="card-actions">
-                    <button className="btn btn-primary text-white">
-                      Дэлгэрэнгүй
-                    </button>
-                  </div>
+                  <Popup name={item.name} title={item.title} img={item.img} />
                 </div>
               </div>
             );

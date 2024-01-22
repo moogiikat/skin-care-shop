@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { dataProducts } from "../../data/data";
+import { Popup } from "../../../components/popup";
 export default function Home() {
   const dataCategory = [
     { title: "Сет бүтээгдэхүүн", urlName: "#sets" },
@@ -22,6 +23,9 @@ export default function Home() {
             <p>Dornod Original Skin Care Products</p>
           </div>
         </div>
+        <Link href="/">
+          <button>{`<-home`}</button>
+        </Link>
         <div className="gap-4 grid grid-cols-2 lg:grid-cols-3">
           {dataCategory.map((item, idx) => {
             return (
@@ -51,14 +55,7 @@ export default function Home() {
                   </figure>
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
-
-                    <div className="card-actions">
-                      <Link href={item.urlName}>
-                        <button className="btn btn-primary text-white">
-                          Дэлгэрэнгүй
-                        </button>
-                      </Link>
-                    </div>
+                    <Popup name={item.name} title={item.title} img={item.img} />
                   </div>
                 </div>
               );
@@ -81,13 +78,7 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <div className="card-actions">
-                      <Link href={item.urlName}>
-                        <button className="btn btn-primary text-white">
-                          Дэлгэрэнгүй
-                        </button>
-                      </Link>
-                    </div>
+                    <Popup name={item.name} title={item.title} img={item.img} />
                   </div>
                 </div>
               );
@@ -110,13 +101,7 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <div className="card-actions">
-                      <Link href={item.urlName}>
-                        <button className="btn btn-primary text-white">
-                          Дэлгэрэнгүй
-                        </button>
-                      </Link>
-                    </div>
+                    <Popup name={item.name} title={item.title} img={item.img} />
                   </div>
                 </div>
               );
@@ -139,13 +124,7 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <div className="card-actions">
-                      <Link href={item.urlName}>
-                        <button className="btn btn-primary text-white">
-                          Дэлгэрэнгүй
-                        </button>
-                      </Link>
-                    </div>
+                    <Popup name={item.name} title={item.title} img={item.img} />
                   </div>
                 </div>
               );
@@ -168,13 +147,7 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <div className="card-actions">
-                      <Link href={item.urlName}>
-                        <button className="btn btn-primary text-white">
-                          Дэлгэрэнгүй
-                        </button>
-                      </Link>
-                    </div>
+                    <Popup name={item.name} title={item.title} img={item.img} />
                   </div>
                 </div>
               );
@@ -197,13 +170,7 @@ export default function Home() {
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
 
-                    <div className="card-actions">
-                      <Link href={item.urlName}>
-                        <button className="btn btn-primary text-white">
-                          Дэлгэрэнгүй
-                        </button>
-                      </Link>
-                    </div>
+                    <Popup name={item.name} title={item.title} img={item.img} />
                   </div>
                 </div>
               );
