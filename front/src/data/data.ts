@@ -1,7 +1,7 @@
 export const dataProducts = [
   {
     title: "Ногоон цайны хандтай сальфеткан маск",
-    img: "assets/images/masks/tea_mask.png",
+    img: "assets/images/masks/tea_tree_mask.png",
     category: ["mask", "batga", "kangaroo_mommy"],
     urlName: "/tea_tree_mask",
     price: "",
@@ -40,6 +40,14 @@ export const dataProducts = [
     balance: "",
   },
   {
+    title: "Цагаан будааны охьтой сальфеткан маск",
+    img: "assets/images/masks/tender_mask.png",
+    category: ["mask", "kangaroo_mommy"],
+    urlName: "/tender_mask",
+    price: "",
+    balance: "",
+  },
+  {
     title: "Улаан буудайн үрийн охьтой шөнийн маск",
     img: "assets/images/masks/wheat_night_mask_big.png",
     category: ["mask", "kangaroo_mommy"],
@@ -58,7 +66,7 @@ export const dataProducts = [
   },
   {
     title: "Фолийн хүчил агуулсан дээд зэрэглэлийн сет",
-    img: "assets/images/set/folic_set.png",
+    img: "assets/images/set/folic_acid_set.png",
     category: ["set", "kangaroo_mommy"],
     urlName: "/folic_acid_set",
     price: "",
@@ -138,7 +146,7 @@ export const dataProducts = [
     balance: "",
   },
   {
-    title: "Нарны тос",
+    title: "Будагны суурь болдог нарны тос",
     img: "assets/images/dan-but/narnii_tos_jijig.png",
     category: ["other", "kangaroo_mommy"],
     urlName: "/sunscreen_sm",
@@ -154,14 +162,29 @@ export const dataProducts = [
     balance: "",
   },
   {
-    title: "Нарны тос (Хөгшрөлтийн эсрэг)",
-    img: "assets/images/dan-but/narnii_tos_jijig.png",
+    title: "Хөгшрөлтийн эсрэг нарны тос",
+    img: "assets/images/dan-but/sunscreen_big.png",
     category: ["other", "kangaroo_mommy"],
     urlName: "/sunscreen_bold",
     price: "",
     balance: "",
   },
-
+  {
+    title: "Хүүхдийн хөөсөн бие угаагч, шампунь",
+    img: "assets/images/baby/baby_soap.png",
+    category: ["baby", "kangaroo_mommy"],
+    urlName: "/baby_soap",
+    price: "",
+    balance: "",
+  },
+  {
+    title: "Ямааны сүүний хандтай хүүхдийн бие угаагч",
+    img: "assets/images/baby/baby_goat_soap.png",
+    category: ["baby", "kangaroo_mommy"],
+    urlName: "/baby_goat_soap",
+    price: "",
+    balance: "",
+  },
   {
     title: "Улаан буудайн охьтой нүүр цэвэрлэгч",
     img: "assets/images/dan-but/wheat_cleanser.png",
