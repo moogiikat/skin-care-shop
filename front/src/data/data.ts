@@ -212,8 +212,8 @@ export const dataProducts = [
     price: "30'000",
     net: "210гр",
     balance: "",
-    priceOld: "32'000",
-    priceNew: "28'000",
+    priceOld: "35'000",
+    priceNew: "30'000",
   },
   {
     title: "Шувууны үүрийн охьтой гарын тос",
