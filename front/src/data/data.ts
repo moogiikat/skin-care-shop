@@ -2,9 +2,9 @@ export const dataProducts = [
   {
     title: "Ногоон цайны хандтай сальфеткан маск",
     img: "assets/images/masks/tea_tree_mask.png",
-    category: ["mask", "batga", "kangaroo_mommy"],
+    category: ["mask", "batga", "", "kangaroo_mommy"],
     name: "tea_tree_mask",
-    price: "",
+    price: "3'500",
     balance: "",
   },
   {
@@ -12,7 +12,8 @@ export const dataProducts = [
     img: "assets/images/masks/goat_night.png",
     category: ["mask", "kangaroo_mommy"],
     name: "goat_night_mask",
-    price: "",
+    price: "30'000",
+    net: "50гр",
     balance: "",
   },
   {
@@ -20,7 +21,7 @@ export const dataProducts = [
     img: "assets/images/masks/wheat_mask.png",
     category: ["mask", "kangaroo_mommy"],
     name: "wheat_mask",
-    price: "",
+    price: "3'500",
     balance: "",
   },
   {
@@ -28,7 +29,7 @@ export const dataProducts = [
     img: "assets/images/masks/goat_mask.png",
     category: ["mask", "kangaroo_mommy"],
     name: "goat_mask",
-    price: "",
+    price: "3'500",
     balance: "",
   },
   {
@@ -36,7 +37,7 @@ export const dataProducts = [
     img: "assets/images/masks/cubilose_mask.png",
     category: ["mask", "kangaroo_mommy"],
     name: "cubilose_mask",
-    price: "",
+    price: "4'500",
     balance: "",
   },
   {
@@ -44,7 +45,7 @@ export const dataProducts = [
     img: "assets/images/masks/tender_mask.png",
     category: ["mask", "kangaroo_mommy"],
     name: "/tender_mask",
-    price: "",
+    price: "4'000",
     balance: "",
   },
   {
@@ -52,16 +53,17 @@ export const dataProducts = [
     img: "assets/images/masks/wheat_night_mask_big.png",
     category: ["mask", "kangaroo_mommy"],
     name: "wheat_night_mask",
-    price: "",
+    price: "35'000",
+    net: "150гр",
     balance: "",
   },
 
   {
     title: "Ногоон цайны хандтай сет",
     img: "assets/images/set/tea_tree_set.png",
-    category: ["set", "batga", "kangaroo_mommy"],
+    category: ["set", "batga", "", "kangaroo_mommy"],
     name: "tea_tree_set",
-    price: "",
+    price: "250'000",
     balance: "",
   },
   {
@@ -69,7 +71,7 @@ export const dataProducts = [
     img: "assets/images/set/folic_acid_set.png",
     category: ["set", "kangaroo_mommy"],
     name: "folic_acid_set",
-    price: "",
+    price: "500'000",
     balance: "",
   },
   {
@@ -77,7 +79,7 @@ export const dataProducts = [
     img: "assets/images/set/wheat_set.png",
     category: ["set", "kangaroo_mommy"],
     name: "wheat_set",
-    price: "",
+    price: "300'000",
     balance: "",
   },
   {
@@ -85,7 +87,7 @@ export const dataProducts = [
     img: "assets/images/set/soybean_set.png",
     category: ["set", "kangaroo_mommy"],
     name: "soybean_set",
-    price: "",
+    price: "220'000",
     balance: "",
   },
   {
@@ -93,7 +95,7 @@ export const dataProducts = [
     img: "assets/images/set/cubilose_set.png",
     category: ["set", "kangaroo_mommy"],
     name: "cubilose_set",
-    price: "",
+    price: "300'000",
     balance: "",
   },
 
@@ -102,7 +104,8 @@ export const dataProducts = [
     img: "assets/images/body-skin-care/avocado_lotion.png",
     category: ["body_skincare", "kangaroo_mommy"],
     name: "avocado_lotion",
-    price: "",
+    price: "30'000",
+    net: "210гр",
     balance: "",
   },
   {
@@ -110,7 +113,8 @@ export const dataProducts = [
     img: "assets/images/body-skin-care/cubilose_hand_cream.png",
     category: ["body_skincare", "kangaroo_mommy"],
     name: "cubilose_hand_cream",
-    price: "",
+    price: "22'000",
+    net: "60гр",
     balance: "",
   },
   {
@@ -118,7 +122,8 @@ export const dataProducts = [
     img: "assets/images/body-skin-care/wheat_body_lotion.png",
     category: ["body_skincare", "kangaroo_mommy"],
     name: "wheat_body_lotion",
-    price: "",
+    price: "28'000",
+    net: "180гр",
     balance: "",
   },
   {
@@ -126,7 +131,8 @@ export const dataProducts = [
     img: "assets/images/body-skin-care/cubilose_body_lotion.png",
     category: ["body_skincare", "kangaroo_mommy"],
     name: "cubilose_body_lotion",
-    price: "",
+    net: "210гр",
+    price: "32'000",
     balance: "",
   },
   {
@@ -134,7 +140,8 @@ export const dataProducts = [
     img: "assets/images/body-skin-care/wheat_hand_cream.png",
     category: ["body_skincare", "kangaroo_mommy"],
     name: "wheat_hand_cream",
-    price: "",
+    price: "20'000",
+    net: "60гр",
     balance: "",
   },
   {
@@ -142,7 +149,7 @@ export const dataProducts = [
     img: "assets/images/dan-but/lip_balm.png",
     category: ["other", "kangaroo_mommy"],
     name: "wheat_lip_balm",
-    price: "",
+    price: "10'000",
     balance: "",
   },
   {
@@ -150,15 +157,17 @@ export const dataProducts = [
     img: "assets/images/dan-but/narnii_tos_jijig.png",
     category: ["other", "kangaroo_mommy"],
     name: "sunscreen_sm",
-    price: "",
+    net: "40гр",
+    price: "50'000",
     balance: "",
   },
   {
-    title: "Улаан буудайн охьтой нүүр угаагч",
+    title: "Амин хүчлийн найрлагатай нүүр угаагч",
     img: "assets/images/dan-but/wheat_cleanser_new.png",
     category: ["other", "kangaroo_mommy"],
     name: "wheat_cleanser_new",
-    price: "",
+    net: "100гр",
+    price: "28'000",
     balance: "",
   },
   {
@@ -166,7 +175,8 @@ export const dataProducts = [
     img: "assets/images/dan-but/sunscreen_big.png",
     category: ["other", "kangaroo_mommy"],
     name: "sunscreen_bold",
-    price: "",
+    net: "50гр",
+    price: "50'000",
     balance: "",
   },
   {
@@ -174,7 +184,8 @@ export const dataProducts = [
     img: "assets/images/baby/baby_soap.png",
     category: ["baby", "kangaroo_mommy"],
     name: "/baby_soap",
-    price: "",
+    net: "300гр",
+    price: "35'000",
     balance: "",
   },
   {
@@ -182,6 +193,7 @@ export const dataProducts = [
     img: "assets/images/baby/baby_goat_soap.png",
     category: ["baby", "kangaroo_mommy"],
     name: "/baby_goat_soap",
+    net: "300гр",
     price: "",
     balance: "",
   },
@@ -190,6 +202,7 @@ export const dataProducts = [
     img: "assets/images/dan-but/wheat_cleanser.png",
     category: ["other", "kangaroo_mommy"],
     name: "wheat_cleanser",
+    net: "гр",
     price: "",
     balance: "",
   },
@@ -198,7 +211,8 @@ export const dataProducts = [
     img: "assets/images/dan-but/wheat_cream.png",
     category: ["other", "kangaroo_mommy"],
     name: "wheat_cream",
-    price: "",
+    net: "50гр",
+    price: "50'000",
     balance: "",
   },
   {
@@ -206,7 +220,8 @@ export const dataProducts = [
     img: "assets/images/dan-but/toothpaste_orange.png",
     category: ["other", "kangaroo_mommy"],
     name: "toothpaste_orange",
-    price: "",
+    net: "100гр",
+    price: "15'000",
     balance: "",
   },
   {
@@ -214,7 +229,7 @@ export const dataProducts = [
     img: "assets/images/hair/wheat_sham_condi.png",
     category: ["hair", "kangaroo_mommy"],
     name: "wheat_hair_set",
-    price: "",
+    price: "58'000",
     balance: "",
   },
   {
@@ -222,7 +237,8 @@ export const dataProducts = [
     img: "assets/images/hair/wheat_sham.png",
     category: ["hair", "kangaroo_mommy"],
     name: "wheat_sham",
-    price: "",
+    net: "300гр",
+    price: "32'000",
     balance: "",
   },
   {
@@ -230,7 +246,8 @@ export const dataProducts = [
     img: "assets/images/hair/wheat_condi.png",
     category: ["hair", "kangaroo_mommy"],
     name: "wheat_condi",
-    price: "",
+    net: "200гр",
+    price: "28'000",
     balance: "",
   },
   {
@@ -238,7 +255,8 @@ export const dataProducts = [
     img: "assets/images/dan-but/cubilose_cream.png",
     category: ["other", "kangaroo_mommy"],
     name: "cubilose_cream",
-    price: "",
+    net: "500гр",
+    price: "55'000",
     balance: "",
   },
   {
@@ -246,7 +264,8 @@ export const dataProducts = [
     img: "assets/images/dan-but/toothpaste_ners.png",
     category: ["other", "kangaroo_mommy"],
     name: "toothpaste_ners",
-    price: "",
+    net: "100гр",
+    price: "15'000",
     balance: "",
   },
   {
