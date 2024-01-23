@@ -273,7 +273,17 @@ export const dataProducts = [
     img: "assets/images/dan-but/underwear_wash.png",
     category: ["other", "kangaroo_mommy"],
     name: "underwear_wash",
-    price: "",
+    net: "400гр",
+    price: "20'000",
+    balance: "",
+  },
+  {
+    title: "Улаан буудайн охьтой зовхины маск",
+    img: "assets/images/dan-but/underwear_wash.png",
+    category: ["other", "kangaroo_mommy"],
+    name: "underwear_wash",
+    net: "400гр",
+    price: "20'000",
     balance: "",
   },
 ];
