@@ -182,7 +182,7 @@ export default function Home() {
             className="fill-current"
           />
 
-          <p>Copyright © 2024 - All right reserved</p>
+          <p>Захиалга хийх бол 91117395 утсаар холбогдоно уу. Баярлалаа</p>
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <a>
