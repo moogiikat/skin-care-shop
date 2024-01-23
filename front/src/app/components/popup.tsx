@@ -6,9 +6,21 @@ interface IProps {
   name: string;
   title: string;
   img: string;
+  price: string;
+  net?: string;
+  balance: string;
+  description: string;
 }
 
-export const Popup: React.FC<IProps> = ({ name, title, img }) => {
+export const Popup: React.FC<IProps> = ({
+  name,
+  title,
+  img,
+  price,
+  net,
+  balance,
+  description,
+}) => {
   return (
     <div>
       <button
@@ -24,15 +36,28 @@ export const Popup: React.FC<IProps> = ({ name, title, img }) => {
       <dialog id={name} className="modal">
         <div className="modal-box">
           <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg">{title}</h3>
-          <figure className="px-4 pt-4">
-            <img src={img} alt="set" className="rounded-xl" />
-          </figure>
+          <h3 className="font-bold text-lg whitespace-pre-wrap px-12">
+            {title}
+          </h3>
+          <div className="flex flex-col">
+            <div className="lg:grid lg:grid-cols-3">
+              <figure className="pt-3 col-span-2 w-full">
+                <img src={img} alt="set" className="rounded-xl" />
+              </figure>
+              <div className="lg:pt-32">
+                <p>Үнэ: {price}₮</p>
+                {net && <p>Хэмжээ: {net}</p>}
+                <p>Үлдэгдэл: {balance}</p>
+              </div>
+            </div>
+            <p className="px-2 text-justify font-sans whitespace-pre-wrap">
+              {description}
+            </p>
+          </div>
         </div>
       </dialog>
     </div>

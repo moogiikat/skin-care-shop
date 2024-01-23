@@ -1,35 +1,9 @@
+import { dataProducts } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
 import { Popup } from "./components/popup";
 
 export default function Home() {
-  const dataCard = [
-    {
-      name: "data1",
-      title: "Шувууны үүрний охьтой гарын тос",
-      img: "assets/images/body-skin-care/cubilose_hand_cream.png",
-      isNew: false,
-    },
-    {
-      name: "data2",
-      title: "Ямааны сүүний охьтой шөнийн маск",
-      img: "assets/images/masks/goat_night.png",
-      isNew: false,
-    },
-    {
-      name: "data3",
-      title: "Улаан буудайн охьтой нүүр угаагч",
-      img: "assets/images/dan-but/wheat_cleanser_new.png",
-      isNew: true,
-    },
-    {
-      name: "data4",
-      title: "Модны цайны хандтай маск",
-      img: "assets/images/masks/tea_mask.png",
-      isNew: false,
-    },
-  ];
-
   const dataSaleCard = [
     {
       name: "item1",
@@ -124,63 +98,79 @@ export default function Home() {
 
         <p className="font-bold text-xl">Онцлох бүтээгдэхүүн</p>
         <div className="carousel carousel-center max-w-full gap-4 pt-4">
-          {dataCard.map((item, idx) => {
-            return (
-              <div key={idx} className="indicator">
-                {item.isNew && (
-                  <span className="indicator-item indicator-center badge badge-primary h-8 text-white">
-                    Шинэ бүтээгдэхүүн
-                  </span>
-                )}
-                <div className="card carousel-item w-60 bg-base-100 ">
+          {dataProducts
+            .filter((data) => data.category.includes("special"))
+            .map((item, idx) => {
+              return (
+                <div key={idx} className="indicator">
+                  {item.isNew && (
+                    <span className="indicator-item indicator-center text-pink-200 font-semibold badge badge-primary h-8 bg-pink-600">
+                      Шинэ бүтээгдэхүүн
+                    </span>
+                  )}
+                  <div className="card carousel-item w-60 bg-base-100 ">
+                    <figure className="px-4 pt-4">
+                      <img
+                        src={item.img}
+                        alt="body_lotion"
+                        className="rounded-xl"
+                      />
+                    </figure>
+                    <div className="card-body p-4 items-center text-center">
+                      <h2 className="card-title text-base">{item.title}</h2>
+                      <div className="card-actions">
+                        <Popup
+                          name={item.name}
+                          title={item.title}
+                          img={item.img}
+                          description={item.description}
+                          price={item.price}
+                          balance={item.balance}
+                          net={item.net}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+
+        <p className="font-bold text-xl pt-5">Хямдралтай бүтээгдэхүүн</p>
+        <div className="carousel carousel-center max-w-full gap-4 ">
+          {dataProducts
+            .filter((data) => data.category.includes("sale"))
+            .map((item, idx) => {
+              return (
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
                   <figure className="px-4 pt-4">
-                    <img
-                      src={item.img}
-                      alt="body_lotion"
-                      className="rounded-xl"
-                    />
+                    <img src={item.img} alt="Sale" className="rounded-xl" />
                   </figure>
                   <div className="card-body p-4 items-center text-center">
                     <h2 className="card-title text-base">{item.title}</h2>
+                    <div className="flex items-center gap-4 font-sans">
+                      <div className="line-through  text-base">
+                        {item.priceOld}₮
+                      </div>
+                      <div className=" text-red-500 font-semibold ">
+                        {item.priceNew}₮
+                      </div>
+                    </div>
                     <div className="card-actions">
                       <Popup
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <p className="font-bold text-xl pt-5">Хямдралтай бүтээгдэхүүн</p>
-        <div className="carousel carousel-center max-w-full gap-4 ">
-          {dataSaleCard.map((item, idx) => {
-            return (
-              <div key={idx} className="card carousel-item w-60 bg-base-100 ">
-                <figure className="px-4 pt-4">
-                  <img src={item.img} alt="Sale" className="rounded-xl" />
-                </figure>
-                <div className="card-body p-4 items-center text-center">
-                  <h2 className="card-title text-base">{item.title}</h2>
-                  <div className="flex items-center gap-4 font-sans">
-                    <div className="line-through  text-base">
-                      {item.priceOld}₮
-                    </div>
-                    <div className=" text-red-500 font-semibold ">
-                      {item.priceNew}₮
-                    </div>
-                  </div>
-                  <div className="card-actions">
-                    <Popup name={item.name} title={item.title} img={item.img} />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
       <footer className="footer items-center p-4 bg-neutral text-neutral-content">

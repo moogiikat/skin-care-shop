@@ -4,11 +4,14 @@ import { dataProducts } from "../../data/data";
 import { Popup } from "../components/popup";
 export default function Suggestions() {
   const dataCategory = [
-    { title: "Батагшилт", urlName: "#problems1" },
+    { title: "Батгашилт", urlName: "#problems1" },
     { title: "Сэвх нөсөө", urlName: "#problems2" },
-    { title: "Эмзэг арьс", urlName: "#problems3" },
-    { title: "Хуурай арьс", urlName: "#problems4" },
-    { title: "Тослог арьс", urlName: "#problems5" },
+    { title: "Нүхжилт", urlName: "#problems3" },
+    { title: "Хөгшрөлт", urlName: "#problems4" },
+    { title: "Эмзэг арьс", urlName: "#problems5" },
+    { title: "Хуурай арьс", urlName: "#problems6" },
+    { title: "Тослог арьс", urlName: "#problems7" },
+    { title: "Холимог арьс", urlName: "#problems8" },
   ];
   return (
     <div>
@@ -23,14 +26,14 @@ export default function Suggestions() {
           </div>
         </div>
         <Link href="/">
-          <button>{`<-home`}</button>
+          <button className=" absolute left-20 font-semibold">{`<- Буцах`}</button>
         </Link>
-        <div className="gap-4 grid grid-cols-2 lg:grid-cols-3">
+        <div className="gap-4 grid grid-cols-2 lg:grid-cols-4">
           {dataCategory.map((item, idx) => {
             return (
               <div className="" key={idx}>
                 <Link href={item.urlName}>
-                  <button className="btn w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
+                  <button className="btn w-52 hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
                     {item.title}
                   </button>
                 </Link>
@@ -40,12 +43,12 @@ export default function Suggestions() {
         </div>
 
         <p id="problems1" className="font-bold text-xl">
-          Сет бүтээгдэхүүн
+          Батгашилтанд зориулсан бүтээгдэхүүн
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
-            .filter((data) => data.category.includes("set"))
+            .filter((data) => data.category.includes("batga"))
             .map((item, idx) => {
               return (
                 <div key={idx} className="card carousel-item w-60 bg-base-100 ">
@@ -59,6 +62,10 @@ export default function Suggestions() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -68,12 +75,12 @@ export default function Suggestions() {
         </div>
 
         <p id="problems2" className="font-bold text-xl">
-          Бүх төрлийн маск
+          Сэвх нөсөөнд зориулсан бүтээгдэхүүн
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
-            .filter((data) => data.category.includes("mask"))
+            .filter((data) => data.category.includes("sevh"))
             .map((item, idx) => {
               return (
                 <div key={idx} className="card carousel-item w-60 bg-base-100 ">
@@ -92,6 +99,10 @@ export default function Suggestions() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -101,12 +112,12 @@ export default function Suggestions() {
         </div>
 
         <p id="problems3" className="font-bold text-xl">
-          Биеийн арьс арчилгаа
+          Нүхжилтэнд зориулсан бүтээгдэхүүн
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
-            .filter((data) => data.category.includes("body_skincare"))
+            .filter((data) => data.category.includes("pore"))
             .map((item, idx) => {
               return (
                 <div key={idx} className="card carousel-item w-60 bg-base-100 ">
@@ -125,6 +136,10 @@ export default function Suggestions() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -134,12 +149,12 @@ export default function Suggestions() {
         </div>
 
         <p id="problems4" className="font-bold text-xl">
-          Хүүхдийн бүтээгдэхүүн
+          Хөгшрөлтийн эсрэг бүтээгдэхүүн
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
-            .filter((data) => data.category.includes("problems4"))
+            .filter((data) => data.category.includes("aging"))
             .map((item, idx) => {
               return (
                 <div key={idx} className="card carousel-item w-60 bg-base-100 ">
@@ -154,6 +169,10 @@ export default function Suggestions() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -161,14 +180,13 @@ export default function Suggestions() {
               );
             })}
         </div>
-
         <p id="problems5" className="font-bold text-xl">
-          Үс арчилгааны бүтээгдэхүүн
+          Эмзэг арьсны бүтээгдэхүүн
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
-            .filter((data) => data.category.includes("problems5"))
+            .filter((data) => data.category.includes("sensitive"))
             .map((item, idx) => {
               return (
                 <div key={idx} className="card carousel-item w-60 bg-base-100 ">
@@ -183,6 +201,10 @@ export default function Suggestions() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -191,13 +213,13 @@ export default function Suggestions() {
             })}
         </div>
 
-        <p id="other" className="font-bold text-xl">
-          Бусад бүтээгдэхүүнүүд
+        <p id="problems6" className="font-bold text-xl">
+          Хуурай арьсны бүтээгдэхүүн
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
           {dataProducts
-            .filter((data) => data.category.includes("other"))
+            .filter((data) => data.category.includes("dry"))
             .map((item, idx) => {
               return (
                 <div key={idx} className="card carousel-item w-60 bg-base-100 ">
@@ -212,6 +234,76 @@ export default function Suggestions() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
+                      />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+
+        <p id="problems7" className="font-bold text-xl">
+          Тослог арьсны бүтээгдэхүүн
+        </p>
+
+        <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
+          {dataProducts
+            .filter((data) => data.category.includes("oily"))
+            .map((item, idx) => {
+              return (
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
+                  <figure className="px-4 pt-4">
+                    <img src={item.img} alt="set" className="rounded-xl" />
+                  </figure>
+                  <div className="card-body p-4 items-center text-center">
+                    <h2 className="card-title text-base">{item.title}</h2>
+
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
+                      />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+
+        <p id="problems8" className="font-bold text-xl">
+          Холимог арьсны бүтээгдэхүүн
+        </p>
+
+        <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
+          {dataProducts
+            .filter((data) => data.category.includes("mixed"))
+            .map((item, idx) => {
+              return (
+                <div key={idx} className="card carousel-item w-60 bg-base-100 ">
+                  <figure className="px-4 pt-4">
+                    <img src={item.img} alt="set" className="rounded-xl" />
+                  </figure>
+                  <div className="card-body p-4 items-center text-center">
+                    <h2 className="card-title text-base">{item.title}</h2>
+
+                    <div className="card-actions">
+                      <Popup
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>

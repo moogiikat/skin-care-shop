@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
         <Link href="/">
-          <button>{`<-home`}</button>
+          <button className=" absolute left-20 font-semibold">{`<- Буцах`}</button>
         </Link>
         <div className="gap-4 grid grid-cols-2 lg:grid-cols-3">
           {dataCategory.map((item, idx) => {
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
 
         <p id="sets" className="font-bold text-xl">
-          Сет бүтээгдэхүүн
+          Сэт бүтээгдэхүүн
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
@@ -60,6 +60,10 @@ export default function Home() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -67,8 +71,13 @@ export default function Home() {
               );
             })}
         </div>
+        <Link href="/lists/set">
+          <button className="btn absolute right-24">
+            Бүх сэт бүтээгдэхүүнийг харах
+          </button>
+        </Link>
 
-        <p id="masks" className="font-bold text-xl">
+        <p id="masks" className="font-bold text-xl pt-8">
           Бүх төрлийн маск
         </p>
 
@@ -89,6 +98,10 @@ export default function Home() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -118,6 +131,10 @@ export default function Home() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -147,6 +164,10 @@ export default function Home() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -176,6 +197,10 @@ export default function Home() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
@@ -205,6 +230,10 @@ export default function Home() {
                         name={item.name}
                         title={item.title}
                         img={item.img}
+                        description={item.description}
+                        price={item.price}
+                        balance={item.balance}
+                        net={item.net}
                       />
                     </div>
                   </div>
