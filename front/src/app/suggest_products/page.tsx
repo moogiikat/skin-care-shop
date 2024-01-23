@@ -31,7 +31,7 @@ export default function Home() {
             return (
               <div className="" key={idx}>
                 <Link href={item.urlName}>
-                  <button className="btn w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
+                  <button className="btn w-48 lg:w-full hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
                     {item.title}
                   </button>
                 </Link>

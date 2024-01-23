@@ -16,7 +16,7 @@ export default function Suggestions() {
   return (
     <div>
       <div className="flex flex-col items-center gap-5 text-center pb-5">
-        <div className="flex  flex-row z-20 lg:text-xl sticky top-0 bg-purple-200 py-2 px-4 w-full font-semibold text-purple-950">
+        <div className="flex flex-row z-20 lg:text-xl sticky top-0 bg-purple-200 py-2 px-4 w-full font-semibold text-purple-950">
           <div className="pl-4 py-3 h-fit w-24 hidden lg:block">
             <img src="assets/images/dan-but/logo.png" alt="logo" />
           </div>
@@ -33,7 +33,7 @@ export default function Suggestions() {
             return (
               <div className="" key={idx}>
                 <Link href={item.urlName}>
-                  <button className="btn w-52 hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
+                  <button className="btn w-48 hover:-translate-y-1 hover:scale-110 duration-100 bg-pink-200 hover:bg-pink-300 border-none text-pink-800">
                     {item.title}
                   </button>
                 </Link>
@@ -41,7 +41,6 @@ export default function Suggestions() {
             );
           })}
         </div>
-
         <p id="problems1" className="font-bold text-xl">
           Батгашилтанд зориулсан бүтээгдэхүүн
         </p>
