@@ -24,9 +24,9 @@ export default function Home() {
           </div>
         </div>
         <Link href="/">
-          <button className=" absolute left-20 font-semibold">{`<- Буцах`}</button>
+          <button className="absolute lg:left-20 left-2 font-semibold">{`<- Буцах`}</button>
         </Link>
-        <div className="gap-4 grid grid-cols-2 lg:grid-cols-3">
+        <div className="gap-4 grid grid-cols-2 lg:grid-cols-3 pt-5">
           {dataCategory.map((item, idx) => {
             return (
               <div className="" key={idx}>
