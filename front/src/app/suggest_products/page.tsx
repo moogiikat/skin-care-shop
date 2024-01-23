@@ -71,11 +71,11 @@ export default function Home() {
               );
             })}
         </div>
-        <Link href="/lists/set">
+        {/* <Link href="/lists/set">
           <button className="btn absolute right-24">
             Бүх сэт бүтээгдэхүүнийг харах
           </button>
-        </Link>
+        </Link> */}
 
         <p id="masks" className="font-bold text-xl pt-8">
           Бүх төрлийн маск
