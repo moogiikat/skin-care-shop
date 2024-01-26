@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { dataProducts } from "../../data/data";
+import { getProducts } from "@/services/redis/getProducts";
 import { Popup } from "../components/popup";
+import { use } from "react";
 export default function Home() {
   const dataCategory = [
     { title: "Сет бүтээгдэхүүн", urlName: "#sets" },
@@ -11,6 +12,8 @@ export default function Home() {
     { title: "Үс арчилгааны бүтээгдэхүүн", urlName: "#hair" },
     { title: "Бусад бүтээгдэхүүнүүд", urlName: "#other" },
   ];
+
+  const response = use(getProducts());
   return (
     <div>
       <div className="flex flex-col items-center gap-5 text-center pb-5">
@@ -45,7 +48,7 @@ export default function Home() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("set"))
             .map((item, idx) => {
               return (
@@ -82,7 +85,7 @@ export default function Home() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("mask"))
             .map((item, idx) => {
               return (
@@ -115,7 +118,7 @@ export default function Home() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("body_skincare"))
             .map((item, idx) => {
               return (
@@ -148,7 +151,7 @@ export default function Home() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("baby"))
             .map((item, idx) => {
               return (
@@ -181,7 +184,7 @@ export default function Home() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("hair"))
             .map((item, idx) => {
               return (
@@ -214,7 +217,7 @@ export default function Home() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("other"))
             .map((item, idx) => {
               return (

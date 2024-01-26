@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { dataProducts } from "../../data/data";
+import { getProducts } from "@/services/redis/getProducts";
 import { Popup } from "../components/popup";
+import { use } from "react";
 export default function Suggestions() {
+  const response = use(getProducts());
   const dataCategory = [
     { title: "Батгашилт", urlName: "#problems1" },
     { title: "Сэвх нөсөө", urlName: "#problems2" },
@@ -46,7 +48,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("batga"))
             .map((item, idx) => {
               return (
@@ -78,7 +80,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("sevh"))
             .map((item, idx) => {
               return (
@@ -115,7 +117,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("pore"))
             .map((item, idx) => {
               return (
@@ -152,7 +154,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("aging"))
             .map((item, idx) => {
               return (
@@ -184,7 +186,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("sensitive"))
             .map((item, idx) => {
               return (
@@ -217,7 +219,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("dry"))
             .map((item, idx) => {
               return (
@@ -250,7 +252,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("oily"))
             .map((item, idx) => {
               return (
@@ -283,7 +285,7 @@ export default function Suggestions() {
         </p>
 
         <div className="carousel carousel-center max-w-full lg:max-w-[1264px] gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("mixed"))
             .map((item, idx) => {
               return (

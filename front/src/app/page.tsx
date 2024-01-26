@@ -1,9 +1,11 @@
-import { dataProducts } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
 import { Popup } from "./components/popup";
+import { getProducts } from "@/services/redis/getProducts";
+import { use } from "react";
 
 export default function Home() {
+  const response = use(getProducts());
   const dataSaleCard = [
     {
       name: "item1",
@@ -98,7 +100,7 @@ export default function Home() {
 
         <p className="font-bold text-xl">Онцлох бүтээгдэхүүн</p>
         <div className="carousel carousel-center max-w-full gap-4 pt-4">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("special"))
             .map((item, idx) => {
               return (
@@ -138,7 +140,7 @@ export default function Home() {
 
         <p className="font-bold text-xl pt-5">Хямдралтай бүтээгдэхүүн</p>
         <div className="carousel carousel-center max-w-full gap-4 ">
-          {dataProducts
+          {response
             .filter((data) => data.category.includes("sale"))
             .map((item, idx) => {
               return (
