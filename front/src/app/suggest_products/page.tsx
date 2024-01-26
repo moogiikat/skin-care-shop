@@ -19,7 +19,9 @@ export default function Home() {
       <div className="flex flex-col items-center gap-5 text-center pb-5">
         <div className="flex flex-row z-20 lg:text-xl sticky top-0 bg-purple-200 py-2 px-4 w-full font-semibold text-purple-950">
           <div className="pl-4 py-3 h-fit w-24 hidden lg:block">
-            <img src="assets/images/dan-but/logo.png" alt="logo" />
+            <Link href="/">
+              <img src="assets/images/dan-but/logo.png" alt="logo" />
+            </Link>
           </div>
           <div className="flex flex-col bg-purple-200 py-4 w-full font-semibold text-purple-950">
             Дорнод Оргинал Гоо Сайхны Бүтээгдэхүүн
