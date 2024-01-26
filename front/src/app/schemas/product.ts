@@ -14,13 +14,13 @@ export const ProductSchema = object({
   title: string(),
   description: string(),
   img: string(),
-  isNew: boolean(),
+  isNew: optional(boolean()),
   name: string(),
   price: string(),
-  priceNew: string(),
-  priceOld: string(),
+  priceNew: optional(string()),
+  priceOld: optional(string()),
   category: array(string()),
   balance: string(),
-  net: string(),
+  net: optional(string()),
 });
 export type ProductSchema = Output<typeof ProductSchema>;
