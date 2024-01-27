@@ -29,7 +29,7 @@ export default function Home() {
           </div>
         </div>
         <Link href="/">
-          <button className="absolute lg:left-20 left-2 font-semibold">{`<- Буцах`}</button>
+          <button className="absolute lg:left-20 left-2 font-semibold hover:text-blue-800">{`<- Буцах`}</button>
         </Link>
         <div className="gap-4 grid grid-cols-2 lg:grid-cols-3 pt-5">
           {dataCategory.map((item, idx) => {
